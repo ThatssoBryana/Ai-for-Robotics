@@ -55,7 +55,7 @@ def main():
     while cap.isOpened():
         ret, frame = cap.read()
         if not ret:
-            break
+            continue
 
         objects = publicDetector.detect_objects(net, frame, dim=300)
 
@@ -93,6 +93,11 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+
+
+
+
 
 
 
